@@ -16,3 +16,8 @@
 [29-Jul-2017 17:23:03 UTC] PHP   2. mysqli->query() /home/ubuntu/workspace/ey_solution/production/test.php:14
 [29-Jul-2017 19:51:00 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/ubuntu/workspace/ey_solution/production/index.php on line 229
 [29-Jul-2017 19:52:30 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/ubuntu/workspace/ey_solution/production/index.php on line 229
+[29-Jul-2017 21:39:57 UTC] PHP Parse error:  syntax error, unexpected 'Me' (T_STRING), expecting ',' or ';' in /home/ubuntu/workspace/ey_solution/production/index.php on line 197
+[29-Jul-2017 21:40:12 UTC] PHP Parse error:  syntax error, unexpected '">Click Me!</button>' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';' in /home/ubuntu/workspace/ey_solution/production/index.php on line 205
+[29-Jul-2017 21:41:01 UTC] PHP Parse error:  syntax error, unexpected 'Me' (T_STRING), expecting ',' or ';' in /home/ubuntu/workspace/ey_solution/production/index.php on line 197
+[29-Jul-2017 21:44:29 UTC] PHP Parse error:  syntax error, unexpected 'button' (T_STRING), expecting ',' or ';' in /home/ubuntu/workspace/ey_solution/production/index.php on line 191
+[29-Jul-2017 21:46:55 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/ubuntu/workspace/ey_solution/production/index.php on line 193

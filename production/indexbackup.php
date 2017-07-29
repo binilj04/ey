@@ -132,17 +132,21 @@
                     <table id="datatable" class="table table-striped table-bordered">
                       <thead>
                         <tr>
-                          <th>Form</th>
-                          <th>Start Date</th>
-                          <th>End Date</th>
+                          <th>Customer ID</th>
                           <th>Plan Name</th>
                           <th>Band Width</th>
-                          <th>Cost</th>
-                          <th>Status</th>
+                          <th>Form</th>
+                          <th>Circuit</th>
+                          <th>oppo</th>
+                          <th>Supplier</th>
+                          <th>Supplier BW</th>
+                          <th>Cost to supplier</th>
+                          <th>Cost from Customer</th>
                           <th>BPM Status</th>
                           <th>Network Status</th>
                           <th>Testing Status</th>
-                         
+                          <th>Start Date</th>
+                          <th>End Date</th>
                         </tr>
                       </thead>
 
@@ -152,6 +156,7 @@
                         
                         <?php
                               $custn = 'ABC011';
+                              // $pass = 'sanket123';
                                $servername = getenv('IP');
                                   $username = getenv('C9_USER');
                                   $password = "";
@@ -181,22 +186,23 @@
                                               while($row = $result->fetch_assoc()){
                                   ?>
                                           <tr val="<?php echo $row["copf"] ?>">
-                                                  <td class="clickable"><?php echo $row["copf"] ?></td>
-                                                  <td class="clickable"><?php echo $row["date"] ?></td>
-                                                  <td class="clickable"><?php echo $row["edate"] ?></td>
+                                                  <td class="clickable"><?php echo $row["custn"] ?></td>
                                                   <td class="clickable"><?php echo $row["pname"] ?></td>
-                                                  <td class="clickable"><?php echo $row["q_speed"] ?></td>
-                                                  <td class="clickable"><?php echo $row["sp"] ?></td>
-                                                   <td class="clickable"><?php if ($row["sp"]===0){echo "Awaiting Quote";}else if($row["s_bpm"]==='1'){
-                                                      echo "Active";  }else{echo "Awaiting your response";}?></td>
-                                                    <td class="clickable"><?php echo $row["s_bpm"] ?></td>
-                                                    <td class="clickable"><?php echo $row["s_network"] ?></td>
-                                                    <td class="clickable"><?php echo $row["s_testing"] ?></td>
-                                                    
-                                                     </tr>
-                                                    
-Try it Yourself »
-
+                                                  <td class="clickable"><?php echo $row["b_billed"] ?></td>
+                                                  <td class="clickable"><?php echo $row["copf"] ?></td>
+                                                  <td class="clickable"><?php echo $row["cir_id"] ?></td>
+                                                  <td class="clickable"><?php echo $row["oppo"] ?></td>
+                                                   <td class="clickable"><?php echo $row["supp"] ?></td>
+                                                    <td class="clickable"><?php echo $row["q_speed"] ?></td>
+                                                     <td class="clickable"><?php echo $row["cp"] ?></td>
+                                                      <td class="clickable"><?php echo $row["sp"] ?></td>
+                                                       <td class="clickable"><?php echo $row["s_bpm"] ?></td>
+                                                        <td class="clickable"><?php echo $row["s_network"] ?></td>
+                                                         <td class="clickable"><?php echo $row["s_testing"] ?></td>
+                                                          <td class="clickable"><?php echo $row["date"] ?></td>
+                                                          <td class="clickable"><?php echo $row["date"] ?></td>
+                                  
+                                                          </tr>
                                   <?php
                                               }
                                           }
