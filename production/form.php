@@ -60,7 +60,7 @@
                 <ul class="nav side-menu">
                <li><a><i class="fa fa-table"></i> Home <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="form.php">ADD</a></li>
+                      <li><a href="form.html">ADD</a></li>
                     </ul>
                   </li>
 
@@ -111,11 +111,11 @@
         <!-- /top navigation -->
 
         <!-- page content -->
-        <div class="right_col" role="main">
+                <div class="right_col" role="main">
           <div class="">
             <div class="page-title">
               <div class="title_left">
-                <h3>Deals <small>Listed</small></h3>
+                <h3>Form Elements</h3>
               </div>
 
               <div class="title_right">
@@ -129,14 +129,12 @@
                 </div>
               </div>
             </div>
-
             <div class="clearfix"></div>
-
             <div class="row">
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Default Example <small>Users</small></h2>
+                    <h2>Form Design <small>different form elements</small></h2>
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
@@ -155,108 +153,77 @@
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
-                    <p class="text-muted font-13 m-b-30">
-                      DataTables has most features enabled by default, so all you need to do to use it with your own tables is to call the construction function: <code>$().DataTable();</code>
-                    </p>
-                    <table id="datatable" class="table table-striped table-bordered">
-                      <thead>
-                        <tr>
-                          <th>Customer ID</th>
-                          <th>Plan Name</th>
-                          <th>Band Width</th>
-                          <th>Form</th>
-                          <th>Circuit</th>
-                          <th>oppo</th>
-                          <th>Supplier</th>
-                          <th>Supplier BW</th>
-                          <th>Cost to supplier</th>
-                          <th>Cost from Customer</th>
-                          <th>BPM Status</th>
-                          <th>Network Status</th>
-                          <th>Testing Status</th>
-                          <th>Start Date</th>
-                          <th>End Date</th>
-                        </tr>
-                      </thead>
+                    <br />
+                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
 
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">First Name <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Last Name <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" id="last-name" name="last-name" required="required" class="form-control col-md-7 col-xs-12">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Middle Name / Initial</label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input id="middle-name" class="form-control col-md-7 col-xs-12" type="text" name="middle-name">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Gender</label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <div id="gender" class="btn-group" data-toggle="buttons">
+                            <label class="btn btn-default" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
+                              <input type="radio" name="gender" value="male"> &nbsp; Male &nbsp;
+                            </label>
+                            <label class="btn btn-primary" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
+                              <input type="radio" name="gender" value="female"> Female
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Date Of Birth <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input id="birthday" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
+                        </div>
+                      </div>
+                      <div class="ln_solid"></div>
+                      <div class="form-group">
+                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                          <button class="btn btn-primary" type="button">Cancel</button>
+						  <button class="btn btn-primary" type="reset">Reset</button>
+                          <button type="submit" class="btn btn-success">Submit</button>
+                        </div>
+                      </div>
 
-                      <tbody>
-                        
-                        
-                        <?php
-                              $custn = 'ABC011';
-                              // $pass = 'sanket123';
-                               $servername = getenv('IP');
-                                  $username = getenv('C9_USER');
-                                  $password = "";
-                                  $database = "test";
-                                  $dbport = 3306;
-                              
-                              $conn = new mysqli($servername, $username, $password, $database, $dbport);
-                              // Check connection
-                                  if ($db->connect_error) {
-                                      die("Connection failed: " . $db->connect_error);
-                                  } 
-                                  echo "Connected successfully (".$db->host_info.")";
-                              
-                              $check=$conn->query("SELECT * FROM custdata where custn = '$custn'");
-                              if($check->num_rows > 0)
-                              {
-                                echo "@@#";
-                              
-                              ?>
-                              
-                              
-                              <?php
-
-
-                                  $result = $conn->query("SELECT * FROM custdata where custn = '$custn'");
-                                          if ($result->num_rows > 0) {
-                                              // output data of each row
-                                              while($row = $result->fetch_assoc()){
-                                  ?>
-                                          <tr val="<?php echo $row["copf"] ?>">
-                                                  <td class="clickable"><?php echo $row["custn"] ?></td>
-                                                  <td class="clickable"><?php echo $row["pname"] ?></td>
-                                                  <td class="clickable"><?php echo $row["b_billed"] ?></td>
-                                                  <td class="clickable"><?php echo $row["copf"] ?></td>
-                                                  <td class="clickable"><?php echo $row["cir_id"] ?></td>
-                                                  <td class="clickable"><?php echo $row["oppo"] ?></td>
-                                                   <td class="clickable"><?php echo $row["supp"] ?></td>
-                                                    <td class="clickable"><?php echo $row["q_speed"] ?></td>
-                                                     <td class="clickable"><?php echo $row["cp"] ?></td>
-                                                      <td class="clickable"><?php echo $row["sp"] ?></td>
-                                                       <td class="clickable"><?php echo $row["s_bpm"] ?></td>
-                                                        <td class="clickable"><?php echo $row["s_network"] ?></td>
-                                                         <td class="clickable"><?php echo $row["s_testing"] ?></td>
-                                                          <td class="clickable"><?php echo $row["date"] ?></td>
-                                                          <td class="clickable"><?php echo $row["date"] ?></td>
-                                  
-                                                          </tr>
-                                  <?php
-                                              }
-                                          }
-                                  }else
-                                  {
-                                          echo"Check User Id and Password";
-                                  }
-                                  ?>
-                              
-                              
-                              
-                              
-                       
-                         
-                      </tbody>
-                    </table>
-<div id='out'></div>
+                    </form>
                   </div>
                 </div>
               </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 col-xs-12">
+           
+              </div>
 
             </div>
+
+
+
+
           </div>
         </div>
+
         <!-- /page content -->
 
         <!-- footer content -->

@@ -14,3 +14,5 @@
 [29-Jul-2017 17:23:03 UTC] PHP Stack trace:
 [29-Jul-2017 17:23:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/ey_solution/production/test.php:0
 [29-Jul-2017 17:23:03 UTC] PHP   2. mysqli->query() /home/ubuntu/workspace/ey_solution/production/test.php:14
+[29-Jul-2017 19:51:00 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/ubuntu/workspace/ey_solution/production/index.php on line 229
+[29-Jul-2017 19:52:30 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/ubuntu/workspace/ey_solution/production/index.php on line 229

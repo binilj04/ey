@@ -1,5 +1,17 @@
 <html>
 <head>
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>  
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>  
+   <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script> 
+
+   <script type="text/javascript">
+       $(function() {
+               $("#startdate").datepicker({ dateFormat: "dd-mm-yy" }).val()
+               $("#enddate").datepicker({ dateFormat: "dd-mm-yy" }).val()
+       });
+
+   </script>  
+
 </head><body>
 
 <h4  align="center" >All User Information</h4>
@@ -64,5 +76,7 @@ $result = $conn->query("SELECT * FROM user where Email = '$emailid' and Password
 </table>
 </font>
 <hr><hr>
+ Start Date: <input type="text" id="startdate" size="30"/>    
+      End Date: <input type="text" id="enddate" size="30"/>
 </body>
 </html>
