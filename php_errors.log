@@ -1,0 +1,16 @@
+[29-Jul-2017 16:50:02 UTC] PHP Warning:  mysqli::mysqli(): (HY000/2002): Connection timed out in /home/ubuntu/workspace/ey_solution/production/test.php on line 12
+[29-Jul-2017 16:50:02 UTC] PHP Stack trace:
+[29-Jul-2017 16:50:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/ey_solution/production/test.php:0
+[29-Jul-2017 16:50:02 UTC] PHP   2. mysqli->mysqli() /home/ubuntu/workspace/ey_solution/production/test.php:12
+[29-Jul-2017 16:50:02 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/ubuntu/workspace/ey_solution/production/test.php on line 14
+[29-Jul-2017 16:50:02 UTC] PHP Stack trace:
+[29-Jul-2017 16:50:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/ey_solution/production/test.php:0
+[29-Jul-2017 16:50:02 UTC] PHP   2. mysqli->query() /home/ubuntu/workspace/ey_solution/production/test.php:14
+[29-Jul-2017 17:23:03 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1045): Access denied for user 'test'@'localhost' (using password: YES) in /home/ubuntu/workspace/ey_solution/production/test.php on line 12
+[29-Jul-2017 17:23:03 UTC] PHP Stack trace:
+[29-Jul-2017 17:23:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/ey_solution/production/test.php:0
+[29-Jul-2017 17:23:03 UTC] PHP   2. mysqli->mysqli() /home/ubuntu/workspace/ey_solution/production/test.php:12
+[29-Jul-2017 17:23:03 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/ubuntu/workspace/ey_solution/production/test.php on line 14
+[29-Jul-2017 17:23:03 UTC] PHP Stack trace:
+[29-Jul-2017 17:23:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/ey_solution/production/test.php:0
+[29-Jul-2017 17:23:03 UTC] PHP   2. mysqli->query() /home/ubuntu/workspace/ey_solution/production/test.php:14
